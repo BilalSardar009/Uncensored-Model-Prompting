@@ -104,7 +104,7 @@ gr.ChatInterface(
     chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, bubble_full_width=False, avatar_images=[None, "logo.jpg"]),
     #additional_inputs=additional_inputs,
     examples=examples,
-    title=f"<img id='Mixtral-portrait' src='{file/logo.jpg}' width='30%' /> Chat to Evil Mixtral",
+    title=f"<img id='Mixtral-portrait' src='{logo.jpg}' width='30%' /> Chat to Evil Mixtral",
     concurrency_limit=20,
     css=css
 ).launch(show_api=False)
