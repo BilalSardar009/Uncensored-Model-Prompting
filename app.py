@@ -98,15 +98,19 @@ img#santa-portrait {
     border-radius: 10px;
 }
 """
-santa_portrait = """
-https://cdn-lfs-us-1.huggingface.co/repos/d7/f7/d7f7d979f9cc4900d4c2cfb12b580241727ac1977845850590d9ae820c297614/f8ec6cadd640be5c45e017703b276faad4786f1180ef7b0609a646a24cd224fd?response-content-disposition=inline%3B+filename*%3DUTF-8%27%27santa_avatar.png%3B+filename%3D%22santa_avatar.png%22%3B&response-content-type=image%2Fpng&Expires=1703512203&Policy=eyJTdGF0ZW1lbnQiOlt7IkNvbmRpdGlvbiI6eyJEYXRlTGVzc1RoYW4iOnsiQVdTOkVwb2NoVGltZSI6MTcwMzUxMjIwM319LCJSZXNvdXJjZSI6Imh0dHBzOi8vY2RuLWxmcy11cy0xLmh1Z2dpbmdmYWNlLmNvL3JlcG9zL2Q3L2Y3L2Q3ZjdkOTc5ZjljYzQ5MDBkNGMyY2ZiMTJiNTgwMjQxNzI3YWMxOTc3ODQ1ODUwNTkwZDlhZTgyMGMyOTc2MTQvZjhlYzZjYWRkNjQwYmU1YzQ1ZTAxNzcwM2IyNzZmYWFkNDc4NmYxMTgwZWY3YjA2MDlhNjQ2YTI0Y2QyMjRmZD9yZXNwb25zZS1jb250ZW50LWRpc3Bvc2l0aW9uPSomcmVzcG9uc2UtY29udGVudC10eXBlPSoifV19&Signature=M1QyL2Gwb12b0RxZesFOMOpgLzYoL3fVBG2mutAL0ERoqdfRMeec9mlytfxvMSGj88TIZEv1X%7E5Eu%7ERkXh0HovLO3kYR7Q%7Eclfc9P7dVD6FN7g1yDoCU1D6p5SsHsyjsGLm7tyVMb9TWD71DSCV0pIOGDKroxkwGZHwQG1M93gqCYdNWcxOCijiWN9AxsFoG5JaE9092j5SfI9fiQS4tBAtOTFlep2TXPBtJ9rXpGbNpcD2VCKi4wneGAxjJ6gbh77TfB3e79TjpcUir5QpRbFgj4NRnogBylOei4SNHqLI3eB-3ua7BRpkWCwNpNd7jXMoomwokcVW%7Exm63%7E2YjDw__&Key-Pair-Id=KCD77M1F0VK2B
+title="""
+<div style="text-align: center; max-width: 500px; margin: 0 auto;font-size: 94%;">
+    <p>
+    <img src="file/logo.jpg" alt="Chat to Evil Mixtral" >
+    </p>
+</div>
 """
    
 gr.ChatInterface(
+    title=gr.HTML(title)
     fn=generate,
     chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, bubble_full_width=False, avatar_images=[None, "santa_avatar.png"]),
     #additional_inputs=additional_inputs,
-    title=f"<img id='santa-portrait' src='{logo}' width='30%' /> Chat with Santa",
     examples=examples,
     concurrency_limit=20,
     css=css
