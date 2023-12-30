@@ -109,7 +109,7 @@ title="""
 gr.ChatInterface(
     title=gr.HTML(title),
     fn=generate,
-    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, bubble_full_width=False, avatar_images=[None, "santa_avatar.png"]),
+    chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, bubble_full_width=False, avatar_images=[None, "logo.jpg"]),
     #additional_inputs=additional_inputs,
     examples=examples,
     concurrency_limit=20,
