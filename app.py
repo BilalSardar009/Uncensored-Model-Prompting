@@ -98,7 +98,7 @@ img#santa-portrait {
     border-radius: 10px;
 }
 """
-titleo="""
+title="""
 <div style="text-align: center; max-width: 500px; margin: 0 auto;font-size: 94%;">
     <p>
     <img src="file/logo.jpg" alt="Chat to Evil Mixtral" >
