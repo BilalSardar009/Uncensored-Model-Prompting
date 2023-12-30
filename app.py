@@ -98,13 +98,7 @@ img#santa-portrait {
     border-radius: 10px;
 }
 """
-title="""
-<div style="text-align: center; max-width: 500px; margin: 0 auto;font-size: 94%;">
-    <p>
-    <img src="file/logo.jpg" alt="Chat to Evil Mixtral" >
-    </p>
-</div>
-""" 
+
 gr.ChatInterface(
     fn=generate,
     chatbot=gr.Chatbot(show_label=False, show_share_button=False, show_copy_button=True, likeable=True, bubble_full_width=False, avatar_images=[None, "logo.jpg"]),
